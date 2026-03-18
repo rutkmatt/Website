@@ -1,3 +1,137 @@
-<h1>Contact Me</h1>
-<p>Email: rutkmatt@gmail.com</p>
-<p>Linkedin: www.linkedin.com/in/matthew-rutkowski-7b717492</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Matt Rutkowski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <a href="../index.html" class="nav-brand">MR</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta" style="color: var(--accent)">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <span class="section-label">Get In Touch</span>
+    <h1>Contact</h1>
+    <p>
+      Open to interesting conversations, collaborations, and opportunities.
+      Drop a message and I'll get back to you.
+    </p>
+  </header>
+
+  <!-- CONTACT LAYOUT -->
+  <main class="section">
+    <div class="contact-layout">
+
+      <!-- Left: Info -->
+      <aside>
+        <h3 class="reveal">Reach out directly</h3>
+
+        <div class="contact-item reveal" data-delay="50">
+          <div class="contact-icon">
+            <!-- Email icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">
+              <a href="mailto:rutkmatt@gmail.com">rutkmatt@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item reveal" data-delay="100">
+          <div class="contact-icon">
+            <!-- LinkedIn icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="4"/>
+              <path d="M7 10v7M7 7v.01M11 17v-3.5a2.5 2.5 0 015 0V17M11 10v7"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-label">LinkedIn</div>
+            <div class="contact-item-value">
+              <a href="https://www.linkedin.com/in/matthew-rutkowski-7b717492" target="_blank" rel="noopener">
+                matthew-rutkowski
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item reveal" data-delay="150">
+          <div class="contact-icon">
+            <!-- Location icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">United States</div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right: Form -->
+      <form class="contact-form reveal" id="contactForm" data-delay="100" action="mailto:rutkmatt@gmail.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">Matt Rutkowski</div>
+    <span class="footer-copy">© 2025 Matt Rutkowski</span>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,2 +1,187 @@
-<h1>Projects</h1>
-<p>Under constructions</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Matt Rutkowski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <a href="../index.html" class="nav-brand">MR</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" style="color: var(--accent)">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <span class="section-label">Portfolio</span>
+    <h1>Projects</h1>
+    <p>
+      Engineering work, software builds, and hardware experiments.
+      Focused on real outcomes — not just lines of code.
+    </p>
+  </header>
+
+  <!-- PROJECTS -->
+  <main class="section" style="padding-top: 4rem;">
+
+    <span class="section-label reveal">Professional</span>
+    <h2 class="section-title reveal" style="font-size: 1.5rem; margin-bottom: 2rem;">
+      Engineering & Simulation
+    </h2>
+
+    <div class="projects-grid" style="margin-top: 0; margin-bottom: 5rem;">
+
+      <article class="project-card reveal" data-delay="50">
+        <p class="project-category">Simulation · L3Harris</p>
+        <h3>Satellite Data Flow Simulation</h3>
+        <p>
+          End-to-end simulation replicating how data flows through a satellite bus.
+          Used to validate communication protocols, stress-test onboard software, and
+          support mission design decisions. Models packet routing, timing, and link
+          margin behavior under various operational scenarios.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">Systems Modeling</span>
+          <span class="tech-tag">Satellite Comms</span>
+          <span class="tech-tag">Linux Cluster</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link" style="color: var(--text-muted); font-style: italic; font-size: 0.78rem;">
+            Internal / Proprietary
+          </span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-delay="150">
+        <p class="project-category">Algorithm Testbed · L3Harris IR&amp;D</p>
+        <h3>Satellite Algorithm Development Environment</h3>
+        <p>
+          Simulation environment for developing, integrating, and testing
+          algorithms. Led a 20-engineer team through the complete program lifecycle —
+          from concept and design through implementation and delivery. The environment
+          is actively used by multiple algorithm development teams.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">MATLAB</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Signal Processing</span>
+          <span class="tech-tag">CAM Leadership</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link" style="color: var(--text-muted); font-style: italic; font-size: 0.78rem;">
+            Internal / Proprietary
+          </span>
+        </div>
+      </article>
+
+    </div>
+
+    <hr class="section-divider" style="margin-bottom: 4rem;" />
+
+    <span class="section-label reveal">Personal</span>
+    <h2 class="section-title reveal" style="font-size: 1.5rem; margin-bottom: 2rem;">
+      Software & Hardware
+    </h2>
+
+    <div class="projects-grid" style="margin-top: 0;">
+
+      <article class="project-card reveal" data-delay="50">
+        <p class="project-category">Web Development</p>
+        <h3>Personal Website</h3>
+        <p>
+            This site was designed and developed in collaboration with Claude Code, 
+            Anthropic's AI-powered coding assistant. Rather than replacing the development process, 
+            Claude Code was used as a professional tool to accelerate decision-making, streamline implementation, 
+            and maintain code quality. This project reflects my commitment to staying at the forefront of 
+            modern development practices and my ability to work effectively alongside emerging AI technologies.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Claude Code</span>
+        </div>
+        <div class="project-links">
+          <a href="../index.html" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+            </svg>
+            View Site
+          </a>
+        </div>
+      </article>
+
+      <!-- Placeholder cards for future projects -->
+      <article class="project-card reveal" data-delay="150">
+        <!-- <article class="project-card reveal" data-delay="150" style="border-style: dashed; opacity: 0.6;"> -->
+        <p class="project-category">Hardware</p>
+        <h3>Hardware Project</h3>
+        <p>
+              AI Gardener. Born from a passion for cooking and the challenge of maintaining fresh herbs amid a demanding schedule, 
+              this project combines hardware and AI to create a fully autonomous indoor herb garden system. Built on a Raspberry Pi 
+              with an IR camera and a lightweight on-device AI model, the system independently manages watering, lighting, and 
+              nutrient delivery. A generated weekly report provides a full health summary — covering plant condition, resource levels, 
+              and flagged areas for review.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Raspberry Pi</span>
+          <span class="tech-tag">IR Camera</span>
+          <span class="tech-tag">Locally Ran AI</span>
+          <!-- <span class="tech-tag">Canvas API</span> -->
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-delay="250">
+        <p class="project-category">App</p>
+        <h3>App Project</h3>
+        <p>
+          Recipe Manager.
+          A full-stack personal project designed to bring organization and intelligence to home cooking. 
+          The application features a searchable recipe library — filterable by title, ingredient, or meal type — 
+          alongside a meal planning calendar that links directly to individual recipes. 
+          Recipes can be imported from websites or PDFs, and each recipe page includes ingredients with interactive check-off, 
+          step-by-step instructions, and nutritional information.
+          The app integrates with Google Calendar for meal scheduling and automatically compiles a smart shopping list in 
+          Google Keep — intelligently filtering out staples and prompting the user to confirm what to add. Personal notes, 
+          images, and reviews can be attached to any recipe. Built to run on both Linux and Windows, with recipe storage 
+          supported via a personal server or Google Drive.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">TBD</span>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">Matt Rutkowski</div>
+    <span class="footer-copy">© 2025 Matt Rutkowski</span>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

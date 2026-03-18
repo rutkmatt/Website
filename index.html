@@ -1,7 +1,221 @@
-<h1>Welcome to My Website!</h1>
-<!-- Add an image of yourself that links to the about page -->
-<a href="./public/about.html"><img src="./assets/images/personal_image.jpg" width="400"/> </a>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matt Rutkowski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
 
-<br />
-<!-- Add a link to your contact me page here -->
-<a href="./public/contact.html">Contact Me</a>
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-brand">MR</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="public/about.html">About</a></li>
+      <li><a href="public/projects.html">Projects</a></li>
+      <li><a href="public/blog.html">Blog</a></li>
+      <li><a href="public/contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas id="starfield"></canvas>
+
+    <!-- Earth + Orbiting Satellites -->
+    <div class="space-scene">
+      <div class="orbit-container">
+
+        <!-- Orbit 1 – Low Earth Orbit -->
+        <div class="orbit-plane orbit-1">
+          <div class="satellite">
+            <div class="sat-panel left"></div>
+            <div class="sat-body"></div>
+            <div class="sat-panel right"></div>
+          </div>
+        </div>
+
+        <!-- Orbit 2 – Medium inclined -->
+        <div class="orbit-plane orbit-2">
+          <div class="satellite">
+            <div class="sat-panel left"></div>
+            <div class="sat-body"></div>
+            <div class="sat-panel right"></div>
+          </div>
+        </div>
+
+        <!-- Orbit 3 – High polar -->
+        <div class="orbit-plane orbit-3">
+          <div class="satellite">
+            <div class="sat-panel left"></div>
+            <div class="sat-body"></div>
+            <div class="sat-panel right"></div>
+          </div>
+        </div>
+
+        <!-- Earth canvas — orthographic projection with live terminator -->
+        <div class="earth-wrapper">
+          <div class="atmosphere"></div>
+          <canvas id="earthCanvas"></canvas>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Hero Text -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">Space Systems Engineer</p>
+      <h1 class="hero-name">Matt Rutkowski</h1>
+      <p class="hero-tagline">Engineer · Builder · Explorer</p>
+      <div class="hero-actions">
+        <a href="public/projects.html" class="btn btn-primary">View Projects</a>
+        <a href="public/about.html" id="aboutMeBtn" class="btn btn-secondary">About Me</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT PREVIEW ===== -->
+  <section class="about-preview">
+    <div class="about-preview-inner">
+      <div class="about-photo reveal">
+        <img src="assets/images/personal_image.jpg" alt="Matt Rutkowski" />
+      </div>
+      <div class="about-text">
+        <span class="section-label reveal">About</span>
+        <h2 class="section-title reveal">Aerospace engineer turned systems builder.</h2>
+        <p class="reveal" data-delay="100">
+          I'm a Space Systems Engineer at L3Harris with 7+ years of experience spanning
+          the automotive and space industries. I hold a BS and MS in Aerospace and Space
+          Systems Engineering from the University of Michigan.
+        </p>
+        <p class="reveal" data-delay="150">
+          My work centers on developing and maintaining high-fidelity simulations —
+          from modeling satellite data flows to building environments for detection
+          algorithm development and testing.
+        </p>
+        <div class="skill-tags reveal" data-delay="200">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">Space Systems</span>
+          <span class="skill-tag">Simulation</span>
+          <span class="skill-tag">Satellite Systems</span>
+        </div>
+        <a href="public/about.html" class="btn btn-secondary reveal" data-delay="250">Full Bio →</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ===== FEATURED PROJECTS ===== -->
+  <section class="projects-section">
+    <div class="section">
+      <span class="section-label reveal">Work</span>
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <p class="section-body reveal" data-delay="100">
+        A selection of simulation tools, software projects, and hardware builds.
+        Each one focused on real outcomes, not just code.
+      </p>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal" data-delay="100">
+          <p class="project-category">Simulation</p>
+          <h3>Satellite Data Flow Sim</h3>
+          <p>
+            End-to-end simulation replicating how data flows through a satellite bus —
+            used to validate communication protocols and stress-test onboard software.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Systems Modeling</span>
+          </div>
+          <div class="project-links">
+            <span class="project-link" style="color: var(--text-muted); font-style: italic; font-size: 0.78rem;">Internal / Proprietary</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="200">
+          <p class="project-category">Algorithm Development</p>
+          <h3>Detection Algorithm Testbed</h3>
+          <p>
+            Simulation environment for developing and testing detection algorithms.
+            Led a 20-engineer IPT team through design, implementation, and delivery.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">MATLAB</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Signal Processing</span>
+          </div>
+          <div class="project-links">
+            <span class="project-link" style="color: var(--text-muted); font-style: italic; font-size: 0.78rem;">Internal / Proprietary</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="300">
+          <p class="project-category">Web / App</p>
+          <h3>Personal Website</h3>
+          <p>
+            This site — built from scratch to expand full-stack web development skills.
+            Space-themed design with CSS animations and vanilla JS.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="public/projects.html" class="project-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              See All Projects
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT CTA ===== -->
+  <section class="contact-cta">
+    <div class="reveal">
+      <span class="section-label" style="display:block; margin-bottom:0.75rem;">Contact</span>
+      <h2 class="section-title">Let's connect.</h2>
+    </div>
+    <p class="reveal" data-delay="100">
+      Open to interesting conversations, collaborations, and opportunities.
+    </p>
+    <div class="reveal" data-delay="200">
+      <a href="public/contact.html" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-brand">Matt Rutkowski</div>
+    <span class="footer-copy">© 2025 Matt Rutkowski</span>
+    <div class="footer-links">
+      <a href="public/about.html">About</a>
+      <a href="public/projects.html">Projects</a>
+      <a href="public/blog.html">Blog</a>
+      <a href="public/contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
