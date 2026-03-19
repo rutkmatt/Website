@@ -271,17 +271,27 @@ function initScrollReveal() {
   if (!elements.length) return;
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay) || 0;
         setTimeout(() => {
           entry.target.classList.add('visible');
-        }, (entry.target.dataset.delay || 0));
+        }, delay);
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0 });
 
   elements.forEach(el => observer.observe(el));
+
+  // Fallback: force-reveal any elements still hidden after 900ms.
+  // Handles Windows Chrome timing quirks where in-viewport elements
+  // don't reliably fire the IntersectionObserver callback on load.
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      el.classList.add('visible');
+    });
+  }, 900);
 }
 
 /* ========================================
