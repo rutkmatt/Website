@@ -295,26 +295,53 @@ function initScrollReveal() {
 }
 
 /* ========================================
-   CONTACT FORM (basic client-side)
+   CONTACT FORM – EmailJS
    ======================================== */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
+  // EmailJS service and template IDs
+  const SERVICE_ID  = 'service_3usymhj';
+  const TEMPLATE_ID = 'template_vg8qsqn';
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent ✓';
+    btn.textContent = 'Sending…';
     btn.disabled = true;
-    btn.style.background = 'transparent';
-    btn.style.color = 'var(--accent)';
-    btn.style.borderColor = 'var(--border-accent)';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      btn.style = '';
-      form.reset();
-    }, 4000);
+
+    const params = {
+      from_name:  form.querySelector('#name').value,
+      from_email: form.querySelector('#email').value,
+      subject:    form.querySelector('#subject').value,
+      message:    form.querySelector('#message').value,
+    };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
+      .then(() => {
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background   = 'transparent';
+        btn.style.color        = 'var(--accent)';
+        btn.style.borderColor  = 'var(--border-accent)';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = 'Send Message';
+          btn.disabled    = false;
+          btn.style       = '';
+        }, 4000);
+      })
+      .catch(() => {
+        btn.textContent = 'Send Failed – Try Again';
+        btn.disabled    = false;
+        btn.style.background  = 'transparent';
+        btn.style.color       = '#e05c5c';
+        btn.style.borderColor = '#e05c5c';
+        setTimeout(() => {
+          btn.textContent = 'Send Message';
+          btn.style       = '';
+        }, 4000);
+      });
   });
 }
 

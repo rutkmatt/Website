@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () { emailjs.init({ publicKey: '-8LKSAozN4u7u4e8Z' }); })();
+  </script>
 </head>
 <body>
 
@@ -94,7 +98,7 @@
       </aside>
 
       <!-- Right: Form -->
-      <form class="contact-form reveal" id="contactForm" data-delay="100" action="mailto:rutkmatt@gmail.com" method="post" enctype="text/plain">
+      <form class="contact-form reveal" id="contactForm" data-delay="100">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Name</label>
