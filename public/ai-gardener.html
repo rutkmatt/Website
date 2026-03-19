@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Gardener – Matt Rutkowski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <a href="../index.html" class="nav-brand">MR</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" style="color: var(--accent)">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <a href="projects.html" class="project-back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      All Projects
+    </a>
+    <div class="project-hero-meta">
+      <span class="section-label">Hardware · Embedded AI · Raspberry Pi</span>
+      <span class="dev-badge">
+        <span class="dev-badge-dot"></span>
+        In Development
+      </span>
+    </div>
+    <h1>AI Gardener</h1>
+    <p>
+      A fully autonomous indoor herb garden powered by a Raspberry Pi, IR camera,
+      and on-device AI — self-managing watering, lighting, and nutrients with weekly health reports.
+    </p>
+    <div class="project-tech" style="margin-top: 1.25rem;">
+      <span class="tech-tag">Raspberry Pi</span>
+      <span class="tech-tag">IR Camera</span>
+      <span class="tech-tag">On-Device AI</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Computer Vision</span>
+      <span class="tech-tag">Embedded Systems</span>
+    </div>
+  </header>
+
+  <!-- IN-DEVELOPMENT BANNER -->
+  <div class="dev-banner">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+      <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+    </svg>
+    This project is currently under active development. Photos, hardware diagrams, and full documentation will be added as the build progresses.
+  </div>
+
+  <main class="section" style="padding-top: 3rem;">
+
+    <!-- OVERVIEW -->
+    <div class="project-detail-section reveal">
+      <span class="section-label">Overview</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">What it does</h2>
+      <div class="project-detail-body">
+        <!-- TODO: Replace with final overview text -->
+        <p class="placeholder-text">
+          Born from a passion for cooking and the challenge of maintaining fresh herbs amid a demanding schedule,
+          this project combines hardware and AI to create a fully autonomous indoor herb garden system.
+          Built on a Raspberry Pi with an IR camera and a lightweight on-device AI model, the system
+          independently manages watering, lighting, and nutrient delivery. A generated weekly report
+          provides a full health summary — covering plant condition, resource levels, and flagged areas
+          for review.
+        </p>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <div class="project-detail-section reveal">
+      <span class="section-label">Hardware Used</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">Material List</h2>
+      <div class="project-detail-body">
+        <ul class="hardware-list">
+          <!-- TODO: Add hardware items -->
+          <li>Raspberry Pi 5 8GB</li>
+          <li>Raspberry Pi Camera Module 2 NoIR</li>
+          <li>Grove moisture sensor</li>
+          <li>Grove relay module with cable</li>
+          <li>5V submersible pump</li>
+          <li>Micro Servo Motor</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <hr class="section-divider" />
+
+
+    <!-- PHOTOS -->
+    <div class="project-detail-section reveal">
+      <span class="section-label">Photos</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">Build & Setup</h2>
+      <div class="screenshot-grid">
+
+        <figure class="screenshot-slot">
+          <!-- TODO: Replace with hardware photo -->
+          <!-- <img src="../assets/images/ai-gardener-full-setup.jpg" alt="Full Setup" /> -->
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Full Setup</span>
+          </div>
+          <figcaption>Complete hardware setup and enclosure</figcaption>
+        </figure>
+
+        <figure class="screenshot-slot">
+          <!-- TODO: Replace with Raspberry Pi wiring photo -->
+          <!-- <img src="../assets/images/ai-gardener-pi.jpg" alt="Raspberry Pi & Electronics" /> -->
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Electronics</span>
+          </div>
+          <figcaption>Raspberry Pi, sensors, and wiring</figcaption>
+        </figure>
+
+        <figure class="screenshot-slot">
+          <!-- TODO: Replace with IR camera / plant vision photo -->
+          <!-- <img src="../assets/images/ai-gardener-ir.jpg" alt="IR Camera View" /> -->
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>IR Camera View</span>
+          </div>
+          <figcaption>IR camera plant health imaging</figcaption>
+        </figure>
+
+        <figure class="screenshot-slot">
+          <!-- TODO: Replace with weekly report screenshot -->
+          <!-- <img src="../assets/images/ai-gardener-report.jpg" alt="Weekly Health Report" /> -->
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>Weekly Report</span>
+          </div>
+          <figcaption>Auto-generated weekly plant health report</figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- FEATURES -->
+    <div class="project-detail-section reveal">
+      <span class="section-label">Features</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">Key Capabilities</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <path d="M12 2a10 10 0 00-7.35 16.76C5.99 20.5 8.86 22 12 22s6.01-1.5 7.35-3.24A10 10 0 0012 2z"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Autonomous Watering</h3>
+          <!-- TODO: Add detail -->
+          <p class="placeholder-text">Soil moisture sensors trigger precision watering on demand. AI determines schedule adjustments based on plant growth stage and ambient conditions.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </div>
+          <h3>Smart Lighting</h3>
+          <!-- TODO: Add detail -->
+          <p class="placeholder-text">Adaptive grow lighting schedules driven by AI inference on plant health state. Adjusts spectrum and intensity based on growth phase.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/>
+            </svg>
+          </div>
+          <h3>IR Plant Vision</h3>
+          <!-- TODO: Add detail -->
+          <p class="placeholder-text">IR camera images are processed by a lightweight on-device model to detect discoloration, wilting, pest damage, and growth anomalies.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3>Weekly Health Report</h3>
+          <!-- TODO: Add detail -->
+          <p class="placeholder-text">Auto-generated weekly summary covering plant condition, resource levels (water, nutrients, light hours), and flagged observations for review.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/>
+            </svg>
+          </div>
+          <h3>On-Device AI</h3>
+          <!-- TODO: Add detail -->
+          <p class="placeholder-text">All inference runs locally on the Raspberry Pi — no cloud dependency, no latency. Lightweight model optimized for edge deployment.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Nutrient Management</h3>
+          <!-- TODO: Add detail -->
+          <p class="placeholder-text">Automated nutrient dosing system monitors solution levels and triggers delivery when thresholds are met, tracked per plant and growth cycle.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- TECHNICAL DEEP DIVE -->
+    <div class="project-detail-section reveal">
+      <span class="section-label">Technical</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">Hardware & Software</h2>
+      <div class="tech-detail-grid">
+        <div class="tech-detail-block">
+          <h4>Hardware</h4>
+          <!-- TODO: List final BOM -->
+          <p class="placeholder-text">Raspberry Pi · IR Camera Module · Soil moisture sensors · Grow lights · Peristaltic pumps · Relay board</p>
+        </div>
+        <div class="tech-detail-block">
+          <h4>AI / ML</h4>
+          <!-- TODO: Add model details -->
+          <p class="placeholder-text">Lightweight computer vision model running on-device. Trained on plant health imagery for anomaly detection and growth staging.</p>
+        </div>
+        <div class="tech-detail-block">
+          <h4>Software</h4>
+          <!-- TODO: Add stack detail -->
+          <p class="placeholder-text">Python-based control loop. Sensor polling, actuator control, and AI inference managed by a lightweight scheduler on Raspberry Pi OS.</p>
+        </div>
+        <div class="tech-detail-block">
+          <h4>Reporting</h4>
+          <!-- TODO: Add reporting pipeline detail -->
+          <p class="placeholder-text">Automated weekly PDF/email report generation. Aggregates sensor logs, AI observations, and resource consumption over the week.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">Matt Rutkowski</div>
+    <span class="footer-copy">© 2025 Matt Rutkowski</span>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
