@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Server – Matt Rutkowski</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <a href="../index.html" class="nav-brand">MR</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" style="color: var(--accent)">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <a href="projects.html" class="project-back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      All Projects
+    </a>
+    <div class="project-hero-meta">
+      <span class="section-label">Infrastructure · Linux · Docker</span>
+      <span class="dev-badge" style="background: rgba(0,220,130,0.12); border-color: rgba(0,220,130,0.35); color: #00dc82;">
+        <span class="dev-badge-dot" style="background: #00dc82;"></span>
+        Live
+      </span>
+    </div>
+    <h1>Home Server</h1>
+    <p>
+      A self-hosted infrastructure platform built from repurposed components — running a headless Debian OS,
+      fully containerized with Docker, and serving as the backbone of my personal media, storage, and
+      development ecosystem.
+    </p>
+    <div class="project-tech" style="margin-top: 1.25rem;">
+      <span class="tech-tag">Debian Linux</span>
+      <span class="tech-tag">Docker</span>
+      <span class="tech-tag">Portainer</span>
+      <!-- <span class="tech-tag">Plex</span> -->
+      <!-- <span class="tech-tag">Calibre</span> -->
+      <span class="tech-tag">Virtual Machines</span>
+      <!-- <span class="tech-tag">Homarr</span> -->
+    </div>
+  </header>
+
+  <main class="section" style="padding-top: 3rem;">
+
+    <!-- OVERVIEW -->
+    <div class="project-detail-section reveal">
+      <span class="section-label">Overview</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">What it is</h2>
+      <div class="project-detail-body">
+        <p>
+          Built from repurposed components, this home server runs a headless Debian OS and serves as the
+          backbone of my personal infrastructure. All services are containerized using Docker and managed
+          through Portainer, keeping the system modular, maintainable, and easy to update.
+        </p>
+        <p style="margin-top: 1rem;">
+          The server pulls double duty as both a storage solution and a media platform — hosting a full Plex
+          library spanning movies, TV shows, and audiobooks, alongside Calibre for e-book management.
+          Kasam provides a virtualization layer for development and testing in isolated VM environments.
+          Homarr ties everything together as a clean, centralized dashboard for high-level access and monitoring.
+        </p>
+        <p style="margin-top: 1rem;">
+          Beyond media and storage, the server also acts as the hosting environment for several of my personal
+          projects — putting the infrastructure to practical use and giving me a real-world platform to build,
+          test, and iterate against.
+        </p>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- SERVICES -->
+    <div class="project-detail-section reveal">
+      <span class="section-label">Services</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">Running Containers</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+          </div>
+          <h3>Plex Media Server</h3>
+          <p>Streams a curated library of movies, TV shows, and audiobooks to any device on or off the network. Handles transcoding, metadata, and multi-user watch history automatically.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+            </svg>
+          </div>
+          <h3>Calibre</h3>
+          <p>Full e-book library management with format conversion, metadata editing, and a built-in content server for wireless syncing to any reader or device.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/>
+            </svg>
+          </div>
+          <h3>Kasam</h3>
+          <p>Provides a lightweight virtualization layer for spinning up isolated VM environments. Used for development, testing, and sandboxing without needing separate physical hardware.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <h3>Homarr</h3>
+          <p>A centralized, customizable dashboard that aggregates all services into a single pane of glass. Provides quick access links, status indicators, and at-a-glance monitoring across the entire stack.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3>Portainer</h3>
+          <p>Web-based Docker management interface for monitoring container health, viewing logs, managing images and volumes, and deploying updates — all without touching the command line.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+          </div>
+          <h3>Personal Project Hosting</h3>
+          <p>Several of my personal software projects run as containers on the server, giving me a real-world deployment environment for iterating on and testing builds outside of a local dev machine.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- TECHNICAL -->
+    <div class="project-detail-section reveal">
+      <span class="section-label">Technical</span>
+      <h2 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">Stack & Architecture</h2>
+      <div class="tech-detail-grid">
+
+        <div class="tech-detail-block">
+          <h4>Hardware</h4>
+          <p>Assembled from repurposed consumer components — purpose-built to run headless 24/7 with a low enough power draw to be cost-effective as always-on infrastructure.</p>
+        </div>
+
+        <div class="tech-detail-block">
+          <h4>Operating System</h4>
+          <p>Headless Debian Linux. No GUI overhead — all management is done via SSH or web-based interfaces. Chosen for its stability, long release cycles, and broad Docker support.</p>
+        </div>
+
+        <div class="tech-detail-block">
+          <h4>Containerization</h4>
+          <p>Every service runs as an isolated Docker container. Compose files define the stack declaratively, making the entire setup version-controlled, portable, and reproducible from scratch.</p>
+        </div>
+
+        <div class="tech-detail-block">
+          <h4>Storage</h4>
+          <p>Local storage serves the media library and container volumes. Organized directory structure separates persistent config data from media, making backups and migrations straightforward.</p>
+        </div>
+
+        <div class="tech-detail-block">
+          <h4>Networking</h4>
+          <p>Services are isolated on a Docker bridge network with only necessary ports exposed. Remote access is handled securely, keeping the attack surface minimal.</p>
+        </div>
+
+        <div class="tech-detail-block">
+          <h4>Maintenance</h4>
+          <p>Portainer handles day-to-day container management. Updates are rolling — containers are pulled and restarted individually, keeping downtime effectively zero for any single service.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">Matt Rutkowski</div>
+    <span class="footer-copy">© 2025 Matt Rutkowski</span>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
